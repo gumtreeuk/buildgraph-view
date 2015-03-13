@@ -13,9 +13,10 @@
     #flow {
         margin: 0;
         list-style-type: none;
+        padding: 0px;
     }
     .column-wrapper {
-        margin: 20px;
+        margin: 5px;
         display: inline-block;
         vertical-align: top;
     }
@@ -34,10 +35,11 @@
         text-align:center;
         font-size: 1em;
         font-weight: bold;
+        max-width: 6em;
+        word-wrap: break-word;
     }
 
     .build .details {
-        min-height: 40px;
         padding: 4px;
     }
     .build .details .status font {
@@ -202,15 +204,7 @@ jsPlumb.ready(function() {
             });
         </j:when>
         <j:otherwise>
-            connectJobs({
-                id: "${edge.source.id}",
-                row: ${edge.source.displayRow},
-                column: ${edge.source.displayColumn}
-            }, {
-                id: "${edge.target.id}", 
-                row: ${edge.target.displayRow},
-                column: ${edge.target.displayColumn}
-            }, 'blue');
+
         </j:otherwise>
         </j:choose>
     </j:forEach>
