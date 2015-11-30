@@ -24,9 +24,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:jenkinsci/buildgraph-view.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/buildgraph-view.git</developerConnection>
-    <url>https://github.com/jenkinsci/buildgraph-view-plugin</url>
+    <connection>scm:git:git@github.com:gumtreeuk/buildgraph-view.git</connection>
+    <developerConnection>scm:git:git@github.com:gumtreeuk/buildgraph-view.git</developerConnection>
+    <url>https://github.com/gumtreeuk/buildgraph-view</url>
   </scm>
 
   <dependencies>
@@ -58,17 +58,18 @@
 
   </dependencies>
   
-  <repositories>
+  <distributionManagement>
     <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
+      <id>GTRELEASE</id>
+      <name>Gumtree Internal Releases</name>
+      <url>http://nexus.qa.gt.ecg.so/nexus/content/repositories/releases/</url>
     </repository>
-  </repositories>
+    <snapshotRepository>
+      <id>GTSNAPSHOTS</id>
+      <name>Gumtree Internal Snapshots</name>
+      <url>http://nexus.qa.gt.ecg.so/nexus/content/repositories/snapshots/</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+  </distributionManagement>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>repo.jenkins-ci.org</id>
-      <url>http://repo.jenkins-ci.org/public/</url>
-    </pluginRepository>
-  </pluginRepositories>
 </project>
